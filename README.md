@@ -213,64 +213,64 @@ The game is fully playable and released.
 
 ## Core Systems
 
-* [] Project setup
-* [] Game state management
-* [] Wave system
-* [] Enemy spawning
-* [] Enemy navigation
-* [] Tower placement
-* [] Tower upgrades
-* [] Tower selling
-* [] Currency system
-* [] Save system
+* [ ] Project setup
+* [ ] Game state management
+* [ ] Wave system
+* [ ] Enemy spawning
+* [ ] Enemy navigation
+* [ ] Tower placement
+* [ ] Tower upgrades
+* [ ] Tower selling
+* [ ] Currency system
+* [ ] Save system
 
 ---
 
 ## Gameplay
 
-* [] Archer Tower
+* [ ] Archer Tower
 
-* [] Cannon Tower
+* [ ] Cannon Tower
 
-* [] Magic Tower
+* [ ] Magic Tower
 
-* [] Support Tower
+* [ ] Support Tower
 
-* [] Basic Enemy
+* [ ] Basic Enemy
 
-* [] Fast Enemy
+* [ ] Fast Enemy
 
-* [] Heavy Enemy
+* [ ] Heavy Enemy
 
-* [] Flying Enemy
+* [ ] Flying Enemy
 
-* [] Boss Enemy
+* [ ] Boss Enemy
 
 ---
 
 ## UI
 
-* [] Main Menu
-* [] HUD
-* [] Build Menu
-* [] Tower Info Panel
-* [] Pause Menu
-* [] Settings Menu
-* [] Victory Screen
-* [] Defeat Screen
+* [ ] Main Menu
+* [ ] HUD
+* [ ] Build Menu
+* [ ] Tower Info Panel
+* [ ] Pause Menu
+* [ ] Settings Menu
+* [ ] Victory Screen
+* [ ] Defeat Screen
 
 ---
 
 ## Release
 
-* [] Sound Effects
-* [] Background Music
-* [] Visual Effects
-* [] Game Icon
-* [] Screenshots
-* [] Gameplay GIF
-* [] GitHub Release
-* [] itch.io Release
+* [ ] Sound Effects
+* [ ] Background Music
+* [ ] Visual Effects
+* [ ] Game Icon
+* [ ] Screenshots
+* [ ] Gameplay GIF
+* [ ] GitHub Release
+* [ ] itch.io Release
 
 ---
 
