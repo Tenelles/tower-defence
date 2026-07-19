@@ -199,7 +199,7 @@ Assets
 
 ## Current Version
 
-`v1.0.0`
+`v0.0.0`
 
 ## Status
 
