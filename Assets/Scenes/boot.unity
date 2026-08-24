@@ -172,7 +172,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1471092237}
-  - component: {fileID: 1471092236}
+  - component: {fileID: 1471092238}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -180,7 +180,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1471092236
+--- !u!4 &1471092237
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471092235}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1471092238
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,28 +206,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96e8834e205444ee9931fa7d7de496e2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TowerDefence.PathBuilder
-  enemyRoute: {fileID: 11400000, guid: 43446e300d8c8594898c81eb607a9ae7, type: 2}
-  waypoints:
-  - {x: 1.3989549, y: 0, z: -0.7447852}
-  - {x: 1.1120026, y: 2, z: 3.2876344}
-  - {x: 1.0520447, y: 2, z: 1.2212324}
-  - {x: -3.2106051, y: 2, z: 4.669692}
---- !u!4 &1471092237
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1471092235}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.69, y: 0, z: 1.36}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::TowerDefence.EnemyRouteBuilder
+  enemyRoute: {fileID: 0}
+  waypoints: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

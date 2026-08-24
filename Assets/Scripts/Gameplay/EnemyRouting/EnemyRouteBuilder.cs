@@ -7,5 +7,7 @@ namespace TowerDefence
     {
         [SerializeField] private EnemyRoute enemyRoute;
         [SerializeField] private Vector3[] waypoints;
+
+        public Vector3[] Waypoints => waypoints;
     }
 }
