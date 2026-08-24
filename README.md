@@ -203,9 +203,9 @@ Assets
 
 ## Status
 
-✅ Completed
+❌ In progress
 
-The game is fully playable and released.
+The game is under development
 
 ---
 
