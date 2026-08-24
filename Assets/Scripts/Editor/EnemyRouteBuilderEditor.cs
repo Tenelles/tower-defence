@@ -50,7 +50,7 @@ namespace TowerDefence.Editor
 
         private void DrawSaveLoadButtons()
         {
-            bool shouldDisableButtons = _enemyRouteProperty.objectReferenceValue is not EnemyRoute;
+            bool shouldDisableButtons = _enemyRouteProperty.objectReferenceValue is not EnemyRouteAsset;
 
             EditorGUILayout.BeginHorizontal();
             EditorGUI.BeginDisabledGroup(shouldDisableButtons);
@@ -77,7 +77,7 @@ namespace TowerDefence.Editor
 
         private void LoadWaypointsFromAsset()
         {
-            EnemyRoute asset = GetEnemyRoute();
+            EnemyRouteAsset asset = GetEnemyRouteAsset();
 
             int arraySize = asset.waypoints.Length;
             _waypointsProperty.arraySize = arraySize;
@@ -89,7 +89,7 @@ namespace TowerDefence.Editor
 
         private void SaveWaypointsToAsset()
         {
-            EnemyRoute asset = GetEnemyRoute();
+            EnemyRouteAsset asset = GetEnemyRouteAsset();
             int arraySize = _waypointsProperty.arraySize;
             asset.waypoints = new Vector3[arraySize];
             for (var index = 0; index < arraySize; index++)
@@ -103,17 +103,17 @@ namespace TowerDefence.Editor
             }
         }
 
-        private EnemyRoute GetEnemyRoute() =>
-            _enemyRouteProperty?.objectReferenceValue as EnemyRoute ?? CreateEnemyRoute();
+        private EnemyRouteAsset GetEnemyRouteAsset() =>
+            _enemyRouteProperty?.objectReferenceValue as EnemyRouteAsset ?? CreateEnemyRoute();
 
-        private static EnemyRoute CreateEnemyRoute()
+        private static EnemyRouteAsset CreateEnemyRoute()
         {
-            var enemyRoute = CreateInstance<EnemyRoute>();
+            var instance = CreateInstance<EnemyRouteAsset>();
             string assetName = AssetDatabase.GenerateUniqueAssetPath(EnemyRoutesBaseName);
             
-            AssetDatabase.CreateAsset(enemyRoute, assetName);
-            Debug.Log($"Created new {nameof(EnemyRoute)}: {assetName}");
-            return AssetDatabase.LoadAssetAtPath<EnemyRoute>(assetName);
+            AssetDatabase.CreateAsset(instance, assetName);
+            Debug.Log($"Created new {nameof(EnemyRouteAsset)}: {assetName}");
+            return AssetDatabase.LoadAssetAtPath<EnemyRouteAsset>(assetName);
         }
     }
 }
