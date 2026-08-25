@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace TowerDefence
+namespace Core.Events
 {
     public class GlobalEventManager : MonoBehaviour
     {

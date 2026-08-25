@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace TowerDefence
+namespace Gameplay.EnemyRouting
 {
     public class EnemyRoute
     {
@@ -15,19 +15,21 @@ namespace TowerDefence
 
         public EnemyRoute(Vector3[] waypoints)
         {
-            if (waypoints is not { Length: > 2 })
+            if (waypoints is not { Length: > 1 })
                 throw new InvalidOperationException("Must have at least two waypoint.");
 
             Size = waypoints.Length;
             _waypoints = (Vector3[])waypoints.Clone();
-            _distances = new float[Size - 1];
-            _cumulativeDistances = new float[Size - 1];
+            _distances = new float[Size];
+            _cumulativeDistances = new float[Size];
+
+            _distances[0] = 0;
+            _cumulativeDistances[0] = 0;
             TotalDistance = 0;
-            for (var index = 0; index < Size - 1; index++)
+            for (var index = 1; index < Size; index++)
             {
-                float distance = Vector3.Distance(_waypoints[index], _waypoints[index + 1]);
-                _distances[index] = distance;
-                TotalDistance += distance;
+                _distances[index] = Vector3.Distance(_waypoints[index], _waypoints[index - 1]);
+                TotalDistance += _distances[index];
                 _cumulativeDistances[index] = TotalDistance;
             }
 
@@ -37,25 +39,26 @@ namespace TowerDefence
 
         public Vector3 GetPositionByDistance(float distance)
         {
-            int lastWaypointIndex = GetLastIndexBeforeDistance(distance);
-            if (lastWaypointIndex == Size - 1)
-                return _waypoints[lastWaypointIndex];
+            int index = FindWaypointIndexBeforeDistance(distance);
+            if (index == Size - 1)
+                return _waypoints[index];
 
-            float distanceFromLastWaypoint = distance - _distances[lastWaypointIndex];
-            if (distanceFromLastWaypoint <= 0)
-                return _waypoints[lastWaypointIndex];
-
-            return Vector3.MoveTowards(_waypoints[lastWaypointIndex], _waypoints[lastWaypointIndex + 1],
-                distanceFromLastWaypoint);
+            float offset = distance - _cumulativeDistances[index];
+            return offset >= 0
+                ? Vector3.MoveTowards(_waypoints[index], _waypoints[index + 1], offset)
+                : _waypoints[0];
         }
 
-        public int GetLastIndexBeforeDistance(float distance)
+        public int FindWaypointIndexBeforeDistance(float distance)
         {
-            for (var index = 0; index < Size - 1; index++)
-                if (distance < _cumulativeDistances[index])
-                    return index;
+            if (distance <= 0)
+                return 0;
 
-            return Size - 1;
+            if (distance >= TotalDistance)
+                return Size - 1;
+
+            int index = Array.BinarySearch(_cumulativeDistances, distance);
+            return index > 0 ? index : ~index - 1;
         }
     }
 }

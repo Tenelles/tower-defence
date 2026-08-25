@@ -1,7 +1,8 @@
-﻿using UnityEditor;
+﻿using Gameplay.EnemyRouting;
+using UnityEditor;
 using UnityEngine;
 
-namespace TowerDefence.Editor
+namespace Editor
 {
     public static class EnemyRouteBuilderGizmoDrawer
     {

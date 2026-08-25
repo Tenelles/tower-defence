@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Pool;
 using Object = UnityEngine.Object;
 
-namespace TowerDefence
+namespace Core.Pooling
 {
     public class ObjectPoolBuilder<T> where T : MonoBehaviour
     {

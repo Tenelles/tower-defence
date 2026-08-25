@@ -1,7 +1,8 @@
+using Gameplay.EnemyRouting;
 using UnityEditor;
 using UnityEngine;
 
-namespace TowerDefence.Editor
+namespace Editor
 {
     [CustomEditor(typeof(EnemyRouteBuilder))]
     public class EnemyRouteBuilderEditor : UnityEditor.Editor

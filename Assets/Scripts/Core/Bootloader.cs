@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace TowerDefence
+namespace Core
 {
     public class Bootloader : MonoBehaviour
     {

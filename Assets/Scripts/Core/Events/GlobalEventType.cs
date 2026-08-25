@@ -1,4 +1,4 @@
-﻿namespace TowerDefence
+﻿namespace Core.Events
 {
     public enum GlobalEventType
     {

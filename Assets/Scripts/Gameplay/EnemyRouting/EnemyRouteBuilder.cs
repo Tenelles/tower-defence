@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TowerDefence
+namespace Gameplay.EnemyRouting
 {
     [ExecuteInEditMode]
     public class EnemyRouteBuilder : MonoBehaviour
