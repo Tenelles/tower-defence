@@ -1278,20 +1278,6 @@ Example:
   }
 }
 ```
-
----
-
-# 19. Technical Design
-
-## Architecture Overview
-
-The project uses:
-
-* Component-based gameplay objects.
-* ScriptableObject data.
-* Event-based communication.
-* Object pooling.
-
 ---
 
 # 19.1 Scriptable Objects
@@ -1340,96 +1326,6 @@ Contains:
 
 ---
 
-# 19.2 Core Systems
-
-## Game Manager
-
-Responsible for:
-
-* Game state.
-* Victory.
-* Defeat.
-
----
-
-## Wave System
-
-Responsible for:
-
-* Starting waves.
-* Tracking progress.
-* Completing waves.
-
----
-
-## Currency System
-
-Responsible for:
-
-* Gold storage.
-* Transactions.
-
----
-
-## Object Pool
-
-Used for:
-
-* Enemies.
-* Projectiles.
-* Effects.
-
----
-
-## Event System
-
-Used for communication between:
-
-* Towers.
-* Enemies.
-* UI.
-* Game systems.
-
----
-
-# 20. Project Structure
-
-Recommended structure:
-
-```
-Assets
-|
-├── Scripts
-│   ├── Core
-│   ├── Towers
-│   ├── Enemies
-│   ├── UI
-│   ├── Systems
-│   └── Data
-│
-├── Prefabs
-│   ├── Towers
-│   ├── Enemies
-│   ├── Projectiles
-│   └── UI
-│
-├── ScriptableObjects
-│   ├── Towers
-│   ├── Enemies
-│   └── Waves
-│
-├── Audio
-│
-├── Scenes
-│   ├── MainMenu
-│   ├── Level1
-│   └── Level2
-│
-└── Art
-```
-
----
-
 # 21. Development Scope
 
 ## Included
@@ -1446,25 +1342,6 @@ Assets
 
 ---
 
-## Not Included
-
-* Multiplayer.
-* Procedural levels.
-* Additional abilities.
-* Complex enemy AI.
-* Infinite mode.
-* Online features.
-
----
-
-# 22. Final Goal
-
-Create a complete small-scale Tower Defense game that demonstrates:
-
-* Gameplay programming.
-* Unity architecture.
-* System design.
-* UI implementation.
 * Data-driven configuration.
 
 The project should be playable, finished, and suitable for public release.
